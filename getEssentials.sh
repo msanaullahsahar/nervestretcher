@@ -6,7 +6,7 @@
 START=$(date +%s)
 
 echo "This script will download dashboard and device's information."
-# Remove the files if there were already downloaded.
+# Remove the files if there were already downloaded..
 sudo rm -rf dashboard.json nerve_stretcher.json myDevices.csv
 echo -ne '\007'
 
