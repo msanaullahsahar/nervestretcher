@@ -6,7 +6,7 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 # Delete old firmware if any
-sudo rm -rf Firmware.bin
+test -f Firmware.bin && sudo rm -rf Firmware.bin
 
 sudo apt install python3-pip
 sudo pip3 install esptool
