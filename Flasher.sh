@@ -8,8 +8,8 @@ fi
 # Delete old firmware if any
 sudo rm -rf Firmware.bin
 
-sudo apt install python-pip
-sudo pip install esptool
+sudo apt install python3-pip
+sudo pip3 install esptool
 
 clear
 
