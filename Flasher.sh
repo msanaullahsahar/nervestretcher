@@ -15,7 +15,7 @@ clear
 
 # Downloading Updated Firmware.
 echo Downloading Updated Firmware.
-sudo wget https://raw.githubusercontent.com/msanaullahsahar/nestv2/master/Firmware.bin
+sudo wget https://raw.githubusercontent.com/msanaullahsahar/nervestretcher/master/Firmware.bin
 
 read -p "Please enter your COM port number [0 to 9]: "  portNumber
 #portNumber=$(ls /dev/ttyUSB* | grep -o -E '[0-9]+')
