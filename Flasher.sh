@@ -24,7 +24,7 @@ echo ###############################################
 echo Flashing firmware started.
 esptool.py --port /dev/ttyUSB$portNumber write_flash 0x00000000 Firmware.bin
 # Display Ok Box
-whiptail --title "Check Terminal" --msgbox "Please see terminal for output." 8 78
+whiptail --title "Check Terminal" --msgbox "Please see terminal for SUCCESS/FAILURE message." 8 78
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
 exit 1 || return 1
