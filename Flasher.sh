@@ -8,6 +8,7 @@ fi
 # Delete old firmware if any
 test -f Firmware.bin && sudo rm -rf Firmware.bin
 
+# Install Python3 PiP3 and ESPtool
 sudo apt install python3-pip
 sudo pip3 install esptool
 
@@ -17,11 +18,13 @@ clear
 echo Downloading Updated Firmware.
 sudo wget https://raw.githubusercontent.com/msanaullahsahar/nervestretcher/master/Firmware.bin
 
+# Getting serial port information from user.
 read -p "Please enter your COM port number [0 to 9]: "  portNumber
 #portNumber=$(ls /dev/ttyUSB* | grep -o -E '[0-9]+')
 
 echo ###############################################
 echo Flashing firmware started.
+echo ###############################################
 esptool.py --port /dev/ttyUSB$portNumber write_flash 0x00000000 Firmware.bin
 # Display Ok Box
 whiptail --title "Check Terminal" --msgbox "Please see terminal for SUCCESS/FAILURE message." 8 78
