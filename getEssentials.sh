@@ -31,8 +31,6 @@ sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nestv2/master/myDev
 sudo chown -R $myName myDevices.csv
 # New line for spacing
 echo You said your Raspberry-Pi\'s IP address is : $rPiAddress. If this is wrong, run this script again.
-echo Dashboard is downloaded.
-echo Device information is downloaded.
 echo All Done! Press Ok to exit.
 
 END=$(date +%s)
