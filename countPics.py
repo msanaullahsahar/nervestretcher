@@ -1,11 +1,6 @@
 #!/usr/bin/env python
-import os
-import time
-import sys
-import glob
+import os, time, sys, glob, json, socket
 import paho.mqtt.client as mqtt
-import json
-import socket
 host_name = socket.gethostname()
 host_ip = socket.gethostbyname(host_name) 
 data = {'picFiles': 0}
