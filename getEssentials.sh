@@ -11,7 +11,7 @@ sudo rm -rf dashboard.json nerve_stretcher.json myDevices.csv
 echo -ne '\007'
 
 # Fetch dashboard from GitHub
-sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nestv2/master/nerve_stretcher.json"
+sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nervestretcher/master/nerve_stretcher.json"
 
 myName=$(whoami)
 sudo chown -R $myName nerve_stretcher.json
@@ -27,7 +27,7 @@ sudo rm -rf nerve_stretcher.json
 echo -ne '\007'
 
 # Fetch Devices from GitHub
-sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nestv2/master/myDevices.csv"
+sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nervestretcher/master/myDevices.csv"
 sudo chown -R $myName myDevices.csv
 # New line for spacing
 echo You said your Raspberry-Pi\'s IP address is : $rPiAddress. If this is wrong, run this script again.
