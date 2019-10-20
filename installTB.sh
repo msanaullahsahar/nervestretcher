@@ -27,7 +27,7 @@ sudo apt-get install curl -y
 echo -e "\e[30;48;5;82m*** Install Open JDK 8 ***\e[0m"
 echo 'deb http://ftp.de.debian.org/debian sid main' >> /etc/apt/sources.list
 sudo apt-get update -y
-sudo apt-get install openjdk-8-jdk
+sudo apt-get install -y openjdk-8-jdk
 clear
 echo -e "\e[31;43m*** Downloading Latest ThingsBoard Package ***\e[0m"
 URL=$(curl -s https://api.github.com/repos/thingsboard/thingsboard/releases/latest | grep browser_download_url.*deb | cut -d '"' -f 4)
