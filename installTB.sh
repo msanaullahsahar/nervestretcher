@@ -86,7 +86,9 @@ ipv41=$(hostname -I)
 echo -e "\e[30;48;5;82m Installing Proxy Server\e[0m"
 sudo apt install nginx -y
 sudo wget "https://raw.githubusercontent.com/msanaullahsahar/nervestretcher/master/thingsboard.conf"
-sudo mv thingsboard.conf /etc/nginx/conf.d/thingsboard.conf
+sudo mv thingsboard.conf /etc/nginx/sites-enabled/
+sudo rm -rf default
+sudo mv thingsboard.conf default
 sudo systemctl restart nginx
 clear
 # How to access dashboard?
