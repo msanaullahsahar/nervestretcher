@@ -35,11 +35,10 @@ sleep 5
 wget "$URL" 2>&1 |\
 stdbuf -o0 awk '/[.] +[0-9][0-9]?[0-9]?%/ { print substr($0,63,3) }' | \
 dialog --gauge "Downloading Thingsboard Platform. The downloading process may take some minutes depending on the speed of your internet." 10 100
-thingsboard="$(find . -name "*.deb")"
-echo -e "\e[30;48;5;82m*** Making ThingsBoard Platform Ready for Installation***\e[0m"
-sudo dpkg -i $thingsboard
-echo
 clear
+echo -e "\e[30;48;5;82m*** Making ThingsBoard Platform Ready for Installation***\e[0m"
+thingsboard="$(find . -name "*.deb")"
+sudo dpkg -i $thingsboard
 echo -e "\e[30;48;5;82m*** Installing PostgreSQL ***\e[0m"
 sudo apt-get install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql
