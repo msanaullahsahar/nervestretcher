@@ -100,8 +100,4 @@ echo -e "\e[30;48;5;82m***** All Done! *****\e[0m"
 END=$(date +%s)
 DIFF=$(( $END - $START ))
 echo "It took $DIFF seconds to complete this installaion process."
-if (whiptail --title "Reboot Permission" --yesno "Do you want to reboot now (y/n)?" 10 60) then
-sudo reboot now
-else
 echo "Please reboot manually otherwise Thingsboard IoT platform may not start properly ...."
-fi
