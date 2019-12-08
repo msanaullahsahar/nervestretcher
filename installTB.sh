@@ -90,7 +90,6 @@ sudo mv thingsboard.conf /etc/nginx/sites-enabled/
 sudo rm -rf default
 sudo mv thingsboard.conf default
 sudo systemctl restart nginx
-clear
 # How to access dashboard?
 echo -e "\e[30;48;5;82m ***** How to access dashboard? *****\e[0m"
 echo -e "\e[30;48;5;82m ThingsBoard platform can be accessed by using any of the following link.\e[0m"
