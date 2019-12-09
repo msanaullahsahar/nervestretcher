@@ -49,7 +49,7 @@ totalRam=$(free -m | awk '/^Mem:/{print $2}')
 if [ $totalRam -lt 490 ]; then
  echo "WARNING: Thingsboard IoT Platform may run very slow on your Raspberry-Pi."
  echo 'export JAVA_OPTS="$JAVA_OPTS -Dplatform=rpi -Xms256M -Xmx256M"' >> /etc/thingsboard/conf/thingsboard.conf
-elif [ $totalRam -gt 3900 ]; then
+elif [ $totalRam -gt 3000 ]; then
  echo "Your RAM is 4GB"
  echo 'export JAVA_OPTS="$JAVA_OPTS -Dplatform=rpi -Xms2048M -Xmx2048M"' >> /etc/thingsboard/conf/thingsboard.conf
 elif [ $totalRam -gt 490 -o $totalRam -lt 1024 ]; then
